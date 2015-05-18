@@ -57,7 +57,7 @@ public class Registro extends Activity {
             //Lanza error y return
         }
         // Iniciamos la actividad del perfil de usario
-        Intent myintent = new Intent(this,PerfilAdmin.class);
+        Intent myintent = new Intent(this,LlenarFormulario.class);
         myintent.putExtra("usuario",usuario);
         this.startActivity(myintent);
 

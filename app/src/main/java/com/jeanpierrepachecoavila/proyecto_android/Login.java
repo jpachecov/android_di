@@ -62,7 +62,7 @@ public class Login extends Activity {
         if(esAdmin(usuario)){
 
         } else {
-            Intent myintent = new Intent(this, PerfilUsuario.class);
+            Intent myintent = new Intent(this, LlenarFormulario.class);
             myintent.putExtra("usuario",usuario);
             myintent.putExtra("contras",contra);
             this.startActivity(myintent);
