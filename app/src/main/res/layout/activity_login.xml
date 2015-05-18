@@ -1,0 +1,88 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".Login"
+    android:focusableInTouchMode="true"
+    android:longClickable="true">
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/logo"
+        android:src="@drawable/petfriendly"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_above="@+id/usuario"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/usuario"
+        android:text="usuario"
+        android:accessibilityLiveRegion="polite"
+        android:elegantTextHeight="true"
+        android:editable="true"
+        android:enabled="true"
+        android:layout_above="@+id/contraseña"
+        android:layout_alignParentStart="true"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/contraseña"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:text="contraseña"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentStart="false"
+        android:editable="true"
+        android:elegantTextHeight="true"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_alignParentRight="false" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="iniciar sesión"
+        android:id="@+id/inicio"
+        android:background="#ffffd31a"
+        style="@android:style/Animation.Dialog"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_below="@+id/contraseña"
+        android:layout_alignParentStart="true"
+        android:onClick="verificaUsuario"
+        android:width="20dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registrate"
+        android:id="@+id/registro"
+        android:elegantTextHeight="false"
+        android:typeface="monospace"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="42dp"
+        android:background="#ff02aaad"
+        android:onClick="registraNuevo"
+        android:width="130dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="¿No tienes una cuenta?"
+        android:id="@+id/pregunta"
+        android:textAlignment="center"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_above="@+id/registro"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp" />
+
+</RelativeLayout>

@@ -1,0 +1,240 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.jeanpierrepachecoavila.proyecto_android.LlenarFormulario">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <!-- TextView and other stuff -->
+
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="25dp">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="1. Tengo un temperamento..."
+                style="@style/textFormStyle"
+                android:id="@+id/pregunta1"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:visibility="visible" />
+
+            <RadioButton
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Arrebatado"
+                android:id="@+id/arrebatado"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/pregunta1"
+                android:layout_toEndOf="@+id/tranquilo"
+                android:onClick="radioButtonPressed"
+                android:checked="false" />
+
+            <RadioButton
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Flexible"
+                android:id="@+id/flexible"
+                android:layout_below="@+id/tranquilo"
+                android:layout_alignParentStart="true"
+                android:onClick="radioButtonPressed"
+                android:checked="false" />
+
+            <RadioButton
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Tranquilo"
+                android:id="@+id/tranquilo"
+                android:checked="false"
+                android:layout_below="@+id/pregunta1"
+                android:onClick="radioButtonPressed"
+                android:layout_alignParentStart="true" />
+
+            <RadioButton
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Dificil de tratar"
+                android:id="@+id/dificil"
+                android:checked="false"
+                android:layout_below="@+id/pregunta1"
+                android:onClick="radioButtonPressed"
+                android:layout_toEndOf="@+id/tranquilo" />
+
+        </RadioGroup>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            style="@style/textFormStyle"
+            android:text="2. Cuando veo algún animal maltratado en la calle, lo primero que pienso es:"
+            android:id="@+id/pregunta2"
+            android:layout_above="@+id/Respuesta"
+            android:layout_alignParentStart="true"
+            android:textAlignment="center"
+            android:singleLine="false" />
+
+        <EditText
+            android:id="@+id/Respuesta"
+            android:layout_height="wrap_content"
+            android:hint="@string/respuesta"
+            android:inputType="textMultiLine"
+            android:lines="3"
+            android:layout_width="fill_parent"
+            android:layout_above="@+id/button"
+            android:layout_alignEnd="@+id/textView4"
+            android:paddingBottom="25dp"
+            android:textSize="15dp"
+            android:textStyle="italic"></EditText>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/textFormStyle"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="3. ¿Cuánto tiempo libre le dedicarías a tu mascota?"
+            android:id="@+id/pregunta3"
+            android:layout_above="@+id/tiempo_libre"
+            android:layout_alignParentStart="true"
+            android:paddingTop="20dp" />
+
+        <Spinner
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tiempo_libre"
+            android:entries="@array/feedbacktypelist"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:spinnerMode="dropdown"
+            android:paddingTop="20dp"
+            android:background="#fffdfbff" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            style="@style/textFormStyle"
+            android:text="4. ¿Cuánto dinero invertes en el alimento de tu mascota?"
+            android:id="@+id/pregunta4"
+            android:layout_below="@+id/textView5"
+            android:layout_alignParentStart="true"
+            android:paddingTop="10dp" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/dinero"
+            android:layout_below="@+id/pregunta4"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            android:elegantTextHeight="false"
+            android:textStyle="italic" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            style="@style/textFormStyle"
+            android:text="5. ¿Has tenido mascotas anteriormente?"
+            android:id="@+id/pregunta5"
+            android:layout_below="@+id/dinero"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="20dp" />
+
+        <Spinner
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/desp1"
+            android:entries="@array/lista_si_no"
+            android:layout_below="@+id/pregunta5"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            style="@style/textFormStyle"
+            android:text="6. ¿Actualmente tienes mascotas?"
+            android:id="@+id/pregunta6"
+            android:layout_below="@+id/desp1"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="15dp" />
+
+        <Spinner
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/desp2"
+            android:entries="@array/lista_si_no"
+            android:layout_below="@+id/pregunta6"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            style="@style/textFormStyle"
+            android:text="7. ¿Cuántas personas viven en donde tu habitas?"
+            android:id="@+id/pregunta7"
+            android:layout_above="@+id/texto_cu"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/texto_cu"
+            android:layout_above="@+id/pregunta8"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            style="@style/textFormStyle"
+            android:text="8. ¿A cuánto hacienden tus ingresos mensuales?"
+            android:id="@+id/pregunta8"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="15dp" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/ingresos"
+            android:layout_below="@+id/pregunta8"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enviar"
+            android:id="@+id/button"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="#ffffd31a"
+            android:width="170dp" />
+
+
+    </LinearLayout>
+
+</ScrollView>

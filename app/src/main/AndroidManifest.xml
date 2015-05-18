@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jeanpierrepachecoavila.proyecto_android" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".Login"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Registro"
+            android:label="@string/title_activity_registro" >
+        </activity>
+        <activity
+            android:name=".LlenarFormulario"
+            android:label="@string/title_activity_llenar_formulario" >
+        </activity>
+        <activity
+            android:name=".FormularioTerminado"
+            android:label="@string/title_activity_formulario_terminado" >
+        </activity>
+        <activity
+            android:name=".PerfilUsuario"
+            android:label="@string/title_activity_perfil_usuario" >
+        </activity>
+        <activity
+            android:name=".ResultadoFormulario"
+            android:label="@string/title_activity_resultado_formulario" >
+        </activity>
+        <activity
+            android:name=".PerfilAdmin"
+            android:label="@string/title_activity_perfil_admin" >
+        </activity>
+    </application>
+
+</manifest>
