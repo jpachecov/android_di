@@ -10,13 +10,13 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/editText"
-        android:text="usuario"
         android:accessibilityLiveRegion="polite"
         android:elegantTextHeight="true"
         android:editable="true"
         android:enabled="true"
         android:layout_alignWithParentIfMissing="true"
-        android:layout_below="@+id/correo"
+        android:hint="usuario"
+        android:layout_below="@+id/editText2"
         android:layout_alignParentStart="true" />
 
     <EditText
@@ -25,11 +25,11 @@
         android:inputType="none|textPassword"
         android:ems="10"
         android:id="@+id/contrasena"
-        android:text="contraseña"
         android:editable="true"
         android:elegantTextHeight="true"
         android:layout_alignWithParentIfMissing="false"
         android:password="false"
+        android:hint="contraseña"
         android:layout_below="@+id/editText"
         android:layout_alignParentStart="true" />
 
@@ -43,7 +43,7 @@
         android:layout_alignWithParentIfMissing="true"
         android:onClick="registraNuevo"
         android:width="130dp"
-        android:layout_below="@+id/contrasena"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
     <EditText
@@ -52,19 +52,19 @@
         android:inputType="textEmailAddress"
         android:ems="10"
         android:id="@+id/correo"
-        android:text="correo"
         android:layout_below="@+id/nombre"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:hint="correo" />
 
     <EditText
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="nombre"
         android:ems="10"
         android:id="@+id/nombre"
         android:layout_centerVertical="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:hint="nombre" />
 
     <ImageView
         android:layout_width="fill_parent"
@@ -75,6 +75,18 @@
         android:layout_alignParentEnd="false"
         android:src="@drawable/petfriendly"
         android:layout_above="@+id/nombre" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/editText2"
+        android:layout_below="@+id/correo"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:hint="edad" />
 
 
 </RelativeLayout>

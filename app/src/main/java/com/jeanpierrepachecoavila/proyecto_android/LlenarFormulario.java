@@ -1,11 +1,16 @@
 package com.jeanpierrepachecoavila.proyecto_android;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.Spinner;
+import android.widget.Toast;
 
 
 public class LlenarFormulario extends Activity {
@@ -72,5 +77,69 @@ public class LlenarFormulario extends Activity {
                 break;
         }
 
+    }
+
+    public void verificaFormulario(View view){
+
+        EditText respuesta = (EditText)findViewById(R.id.Respuesta);
+        respuesta2 = respuesta.getText().toString();
+        Spinner tiempoLibre = (Spinner) findViewById(R.id.tiempo_libre);
+        respuesta3 = tiempoLibre.getSelectedItem().toString();
+        Spinner alimento_mascota = (Spinner) findViewById(R.id.inversion_alimento);
+        respuesta4 = alimento_mascota.getSelectedItem().toString();
+        Spinner hasTenidoM = (Spinner) findViewById(R.id.desp1);
+        respuesta5 = hasTenidoM.getSelectedItem().toString();
+        Spinner tienesM = (Spinner) findViewById(R.id.desp2);
+        respuesta6 = tienesM.getSelectedItem().toString();
+        Spinner cuantasPersonas = (Spinner) findViewById(R.id.cuantas_personas);
+        respuesta7 = cuantasPersonas.getSelectedItem().toString();
+        Spinner ingresos = (Spinner) findViewById(R.id.ingresos);
+        respuesta8 = ingresos.getSelectedItem().toString();
+        Spinner tiposMascotas = (Spinner) findViewById(R.id.tiposMascotas);
+        respuesta9 = tiposMascotas.getSelectedItem().toString();
+
+        if(respuesta1.isEmpty()){
+            /*
+            Context context = getApplicationContext();
+            CharSequence text = "Contesta todas las preguntas!";
+            int duration = Toast.LENGTH_SHORT;
+
+            Toast toast = Toast.makeText(context, text, duration);
+            toast.show();
+            */
+        }
+        /*
+        if(respuesta2.equals("")){
+
+        }
+        if(respuesta3.equals("")){
+
+        }
+        if(respuesta4.equals("")){
+
+        }
+        if(respuesta5.equals("")){
+
+        }
+        if(respuesta6.equals("")){
+
+        }
+        if(respuesta7.equals("")){
+
+        }
+        if(respuesta8.equals("")){
+
+        }
+        if(respuesta9.equals("")){
+
+        }
+        */
+        Intent myintent = new Intent(this, FormularioTerminado.class);
+        this.startActivity(myintent);
+    }
+
+    public void lanza(View view){
+        Intent myintent = new Intent(this, FormularioTerminado.class);
+        this.startActivity(myintent);
     }
 }

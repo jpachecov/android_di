@@ -1,9 +1,11 @@
 package com.jeanpierrepachecoavila.proyecto_android;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
 public class FormularioTerminado extends Activity {
@@ -35,5 +37,10 @@ public class FormularioTerminado extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void inicio(View view){
+        Intent myintent = new Intent(this, LlenarFormulario.class);
+        this.startActivity(myintent);
     }
 }

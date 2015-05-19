@@ -118,8 +118,7 @@
             android:layout_centerVertical="true"
             android:layout_alignParentStart="true"
             android:spinnerMode="dropdown"
-            android:paddingTop="20dp"
-            android:background="#fffdfbff" />
+            android:paddingTop="20dp" />
 
 
         <TextView
@@ -127,23 +126,18 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             style="@style/textFormStyle"
-            android:text="4. ¿Cuánto dinero invertes en el alimento de tu mascota?"
+            android:text="4. ¿Cuánto dinero invertes en el alimento de tu mascota a la semana?"
             android:id="@+id/pregunta4"
             android:layout_below="@+id/textView5"
             android:layout_alignParentStart="true"
             android:paddingTop="10dp" />
 
-        <EditText
-            android:layout_width="fill_parent"
+        <Spinner
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
-            android:ems="10"
-            android:id="@+id/dinero"
-            android:layout_below="@+id/pregunta4"
-            android:layout_alignParentStart="true"
-            android:layout_marginTop="10dp"
-            android:elegantTextHeight="false"
-            android:textStyle="italic" />
+            android:id="@+id/inversion_alimento"
+            android:entries="@array/inversion"
+            android:layout_gravity="center_horizontal" />
 
         <TextView
             android:layout_width="fill_parent"
@@ -162,7 +156,8 @@
             android:id="@+id/desp1"
             android:entries="@array/lista_si_no"
             android:layout_below="@+id/pregunta5"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:spinnerMode="dropdown" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -181,7 +176,8 @@
             android:id="@+id/desp2"
             android:entries="@array/lista_si_no"
             android:layout_below="@+id/pregunta6"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:spinnerMode="dropdown" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -193,15 +189,13 @@
             android:layout_above="@+id/texto_cu"
             android:layout_alignParentStart="true" />
 
-        <EditText
-            android:layout_width="fill_parent"
+        <Spinner
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="number"
-            android:ems="10"
-            android:id="@+id/texto_cu"
-            android:layout_above="@+id/pregunta8"
-            android:layout_alignParentStart="true"
-            android:layout_marginTop="10dp" />
+            android:id="@+id/cuantas_personas"
+            android:entries="@array/cuantasPersonas"
+            android:layout_gravity="center_horizontal"
+            android:spinnerMode="dropdown" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -214,21 +208,40 @@
             android:layout_alignParentStart="true"
             android:layout_marginTop="15dp" />
 
-        <EditText
-            android:layout_width="fill_parent"
+        <Spinner
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
-            android:ems="10"
             android:id="@+id/ingresos"
-            android:layout_below="@+id/pregunta8"
+            android:entries="@array/ingresos"
+            android:layout_gravity="center_horizontal"
+            android:spinnerMode="dropdown" />
+
+        <TextView
+            style="@style/textFormStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="9.¿Qué tipo de mascotas prefieres?"
+            android:id="@+id/pregunta9"
+            android:layout_centerVertical="true"
             android:layout_alignParentStart="true"
-            android:layout_marginTop="10dp" />
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center_horizontal" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tiposMascotas"
+            android:entries="@array/mascotas"
+            android:layout_gravity="center_horizontal"
+            android:spinnerMode="dropdown" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Enviar"
             android:id="@+id/button"
+            android:onClick="verificaFormulario"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
             android:background="#ffffd31a"
