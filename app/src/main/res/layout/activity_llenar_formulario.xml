@@ -89,22 +89,21 @@
         <EditText
             android:id="@+id/Respuesta"
             android:layout_height="wrap_content"
-            android:hint="@string/respuesta"
-            android:inputType="textMultiLine"
             android:lines="3"
             android:layout_width="fill_parent"
             android:layout_above="@+id/button"
             android:layout_alignEnd="@+id/textView4"
             android:paddingBottom="25dp"
             android:textSize="15dp"
-            android:textStyle="italic"></EditText>
+            android:textStyle="italic"
+            android:inputType="text"></EditText>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/textFormStyle"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="3. ¿Cuánto tiempo libre le dedicarías a tu mascota?"
+            android:text="3. ¿Cuánto tiempo libre le dedicas a tu mascota?"
             android:id="@+id/pregunta3"
             android:layout_above="@+id/tiempo_libre"
             android:layout_alignParentStart="true"
