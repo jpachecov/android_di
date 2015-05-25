@@ -2,7 +2,7 @@
     <string name="app_name">Pet friendly</string>
 
     <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Configuración</string>
     <string name="title_activity_registro">Regístrate</string>
     <string name="title_activity_llenar_formulario">Por favor llena el siguiente formulario:</string>
     <string name="title_activity_formulario_terminado">Has completado el formulario.</string>
